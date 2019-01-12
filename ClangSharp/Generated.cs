@@ -1340,7 +1340,7 @@ namespace ClangSharp
 
     public static partial class clang
     {
-        private const string libraryPath = "libclang";
+        private const string libraryPath = "/usr/lib/x86_64-linux-gnu/libclang-6.0";
 
         [DllImport(libraryPath, EntryPoint = "clang_getCString", CallingConvention = CallingConvention.Cdecl)]
         [return: MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(StringMarshaler))]

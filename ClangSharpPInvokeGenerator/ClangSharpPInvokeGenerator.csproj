@@ -11,7 +11,8 @@
 
   <!-- libclang name, unlikely to need overriding -->
   <PropertyGroup Condition="'$(LibClangName)' == ''">
-    <LibClangName>libclang</LibClangName>
+    <LibClangName Condition="'$(OS)' == 'Windows_NT'">libclang</LibClangName>
+    <LibClangName Condition="'$(OS)' != 'Windows_NT'">/usr/lib/x86_64-linux-gnu/libclang-6.0</LibClangName>
   </PropertyGroup>
 
   <!-- Auto-detect LLVM... more or less -->
